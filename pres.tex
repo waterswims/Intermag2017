@@ -1,9 +1,9 @@
 \documentclass{beamer}
 \usepackage{xcolor}
-%\usepackage{fontspec}
-%\setmainfont{Georgia}
-%\usepackage[T1]{fontenc}
-%\usepackage{winfonts}
+% \usepackage{fontspec}
+% \setmainfont{Georgia}
+% \usepackage[T1]{fontenc}
+\usepackage{winfonts}
 \usepackage[backend=bibtex]{biblatex}
 \renewcommand{\sfdefault}{georgia}
 
@@ -45,23 +45,12 @@
 
 %%%%%%%%%%%%%%%%%%%%
 
-\title{Multi-Scale Models of Granular Magnetic Materials at High Temperatures}
-\author{\textbf{Author}\\Jonathon Waters \\ \vspace{0.5cm} Supervisory Team \\ Hans Fangohr, Denis Kramer and Ondrej Hovorka}
-%\author{Jonathon Waters\inst{1}, Hans Fangohr\inst{1}, Denis Kramer\inst{1}, Andreas Berger\inst{2} and Ondrej Hovorka\inst{1}}
-%\institute{
-%	\inst{1}
-%	Engineering and the Environment,\\
-%	University of Southampton,\\
-%	UK\\ \vspace {1mm}
-%	\inst{2}
-%	CIC nanoGUNE Consolider,\\
-%	San Sebastian,\\
-%	Spain
-%}
+\title{Methodology for Indentifying the Curie Temperature Distributions of Magnetic Granular Systems}
+\author{\textbf{Authors}\\Jonathon Waters, Hans Fangohr, Denis Kramer and Ondrej Hovorka}
 \date{}
 
 \begin{document}
-\frame{\titlepage 
+\frame{\titlepage
 \includegraphics[height=1cm]{Images/sponsor-wo}\hfill\includegraphics[height=1cm]{Images/uos_grey_large}}
 
 \setbeamertemplate{headline}{
@@ -83,19 +72,19 @@
 		\begin{itemize}
 			\item{$T_C$ distribution affects the noise performance}
 		\end{itemize} \vspace{5mm}
-		
+
 		\begin{center}
 		\includegraphics[width=2.9cm]{Images/coerc} \hspace{1mm}
 		\includegraphics[width=2.9cm]{Images/laser} \\
 		\tiny E. Dobisz et al. Proc IEEE 96.11, 1836 (2008)
 		\end{center}
-		
+
 		\column{6cm}
 		In Magnetic Hyperthermia\footnotemark[2]:
 		\begin{itemize}
 		\item{Low $T_C$ reduces tissue damage}
 		\end{itemize}
-		
+
 		\begin{center}
 		\includegraphics[width=4cm]{Images/person} \\
 		\tiny \^{A}ngela Andrade et al. Coating Nanomagnetic Particles for Biomedical Applications (2011)
@@ -132,7 +121,7 @@
 	\begin{itemize}
 		\item{Explicit measurement of individual grains.\footnotemark[3]}
 		\begin{itemize}
-			\item{Switching temperature is measured by a laser system set up. This is related to $T_C$}
+			\item{Switching temperature is measured by a laser system} \item{Switching temperature then related to $T_C$}
 			\item{Very little agreement between methods}
 			\item{Currently only applicable to HAMR}
 		\end{itemize}
@@ -143,13 +132,13 @@
 			\item{Integral measure}
 			\item{But uses bulk relations}
 		\end{itemize}
-	\end{itemize}	
+	\end{itemize}
 	\footnotetext[3]{\tiny S. Pisana et al. IEEE Transactions on Magnetics 51.4, 1 (2015)}
 	\footnotetext[4]{\tiny A. Berger et al. J. Appl. Phys. 91.10, 8393 (2002)}
 \end{frame}
 
 \begin{frame}
-	\frametitle{9 Month Objectives}
+	\frametitle{Objectives}
 	\begin{itemize}
 		\item{Develop a universal method to identify the $T_C$ distribution which incorporates the finite size effects of the individual grains\newline}
 		\item{Test the method against a well quantified benchmark (2D Ising system) in order to verify it's effectiveness for different distributions.\newline}
@@ -172,7 +161,7 @@
 	$$
 	Change of Variables:
 	$$
-	D = d_0\left(\frac{T_C^b - T_C(D)}{T_C^b}\right)^{-\nu} 
+	D = d_0\left(\frac{T_C^b - T_C(D)}{T_C^b}\right)^{-\nu}
 	$$
 	Final Result:
 	$$
@@ -180,10 +169,10 @@
 	$$}
 	\column{4cm}
 	\begin{center}
-	\includegraphics[width=2.5cm]{Images/grains2}	
-	
+	\includegraphics[width=2.5cm]{Images/grains2}
+
 	\includegraphics[width=3.25cm]{Images/Ds_noinset}
-	
+
 	\includegraphics[width=3.25cm]{Images/Aggregate}
 	\end{center}
 	\end{columns}
@@ -191,26 +180,26 @@
 
 \begin{frame}
 	\frametitle{Finding $f_t$}
-		
+
 	\begin{center}
 	\includegraphics[width=4cm]{Images/Aggregate} \hspace{3mm}
 	\includegraphics[width=4cm]{Images/Ds}
-	
+
 	$$
 	M(T) = M_0^*\int_0^{T_C^b} t^{-d\nu +\beta} \tilde{\mu}\left(\frac{T-T_C^b}{t}\right) f_t(t) dt
 	$$
-	
+
 	\begin{itemize}
 		\item{$M(T)$: To be fitted}
 		\item{$d$, $\nu$, $\beta$, $\tilde{\mu}$: Known information about the material}
 		\item{$T_C^b$: May be known, otherwise taken from fit}
 		\item{$M_0^*$, $f_t$ [ $\bar{t}$, $\sigma_t$ ]: Taken from the fit}
 	\end{itemize}
-	
+
 	$$
 	\bar{T}_C = T_C^b - \bar{t} \quad \quad \sigma_{T_C} = \sigma_t
 	$$
-	
+
 	\end{center}
 \end{frame}
 
@@ -232,7 +221,7 @@
 				\item{$T_C^b \approx 2.269$}
 			\end{itemize}
 		\end{itemize} \vspace{4mm}
-		
+
 		Tested against different $f_D$:
 		\begin{itemize}
 			\item{All mean $\bar{D}=100$}
@@ -240,7 +229,7 @@
 		\end{itemize}
 	\column{5cm}
 		\includegraphics[width=4.5cm]{Images/distros}
-		
+
 		\includegraphics[width=4.5cm]{Images/unconst}
 	\end{columns}
 \end{frame}
@@ -253,7 +242,7 @@
 		$$
 		\Rightarrow \sigma_{T_C}^2 = (T_C^b - \bar{T}_C)^2\left(\left(1 + \frac{\sigma_D^2}{\bar{D}^2}\right)^{1/\nu^2}-1\right)
 		$$
-		
+
 		In the Ising model:
 		$$
 		\nu = 1
@@ -262,12 +251,12 @@
 		\Rightarrow \sigma_{T_C} = (T_C^b - \bar{T}_C)\frac{\sigma_D}{\bar{D}}
 		$$
 		\begin{center}\vspace{2mm}
-		
+
 		Fitted results far better!
 		\end{center}
 	\column{5cm}
 		\includegraphics[width=4.5cm]{Images/distros}
-		
+
 		\includegraphics[width=4.5cm]{Images/constr}
 	\end{columns}
 	\footnotetext[5]{\tiny O. Hovorka et al. Appl. Phys. Letters 101.5, 052406 (2012)}
@@ -291,7 +280,7 @@
 \begin{frame}
 	\frametitle{Acknowledgements}
 	In the completion of this work, we acknowledge financial support from the EPSRC Centre for Doctoral Training grant EP/L006766/1. \newline
-	
+
 	We also acknowledge the use of the IRIDIS High Performance Computing Facility, and associated support services at the University of
 Southampton. \newline
 
