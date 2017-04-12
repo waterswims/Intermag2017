@@ -70,7 +70,7 @@
 		\column{6cm}
 		In HAMR\footnotemark[1]:
 		\begin{itemize}
-			\item{$T_C$ distribution affects the noise performance}
+			\item{$T_c$ distribution affects the noise performance}
 		\end{itemize} \vspace{5mm}
 
 		\begin{center}
@@ -82,7 +82,7 @@
 		\column{6cm}
 		In Magnetic Hyperthermia\footnotemark[2]:
 		\begin{itemize}
-		\item{Low $T_C$ reduces tissue damage}
+		\item{Low $T_c$ reduces tissue damage}
 		\end{itemize}
 
 		\begin{center}
@@ -95,21 +95,21 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Defining Finite Sized $T_C$}
+	\frametitle{Defining Finite Sized $T_c$}
 	\begin{columns}
 		\column{6cm}
 		\begin{center}
-		Correlation length $\propto |T-T_C^b|^{-\nu}$ \\ \vspace{3mm}
-		Grain size, $D \propto |T_C(D)-T_C^b|^{-\nu}$ \\ \vspace{3mm}
+		Correlation length $\propto |T-T_c^b|^{-\nu}$ \\ \vspace{3mm}
+		Grain size, $D \propto |T_c(D)-T_c^b|^{-\nu}$ \\ \vspace{3mm}
 		\includegraphics[width=5cm]{Images/grains2}
 		\end{center}
 		\column{6cm}
 		\begin{center}
 		\includegraphics[width=5cm]{Images/TcD}
 		\vspace{4mm}
-		Distribution in $D$ leads to distribution in $T_C$
+		Distribution in $D$ leads to distribution in $T_c$
 		$$
-		f_D(D) \Longrightarrow f_{T_C}(T_C)
+		f_D(D) \Longrightarrow f_{T_c}(T_c)
 		$$
 		\end{center}
 	\end{columns}
@@ -121,7 +121,7 @@
 	\begin{itemize}
 		\item{Explicit measurement of individual grains.\footnotemark[3]}
 		\begin{itemize}
-			\item{Switching temperature is measured by a laser system} \item{Switching temperature then related to $T_C$}
+			\item{Switching temperature is measured by a laser system} \item{Switching temperature then related to $T_c$}
 			\item{Very little agreement between methods}
 			\item{Currently only applicable to HAMR}
 		\end{itemize}
@@ -140,7 +140,7 @@
 \begin{frame}
 	\frametitle{Objectives}
 	\begin{itemize}
-		\item{Develop a universal method to identify the $T_C$ distribution which incorporates the finite size effects of the individual grains\newline}
+		\item{Develop a universal method to identify the $T_c$ distribution which incorporates the finite size effects of the individual grains\newline}
 		\item{Test the method against a well quantified benchmark (2D Ising system) in order to verify it's effectiveness for different distributions.\newline}
 	\end{itemize}
 \end{frame}
@@ -157,15 +157,15 @@
 	$$
 	Single Grain Magnetisation:
 	$$
-	m(D,T) \propto D^{-\beta/\nu} \tilde{\mu} \left(D^{1/\nu}\frac{T-T_C^b}{T_C^b}\right)
+	m(D,T) \propto D^{-\beta/\nu} \tilde{\mu} \left(D^{1/\nu}\frac{T-T_c^b}{T_c^b}\right)
 	$$
 	Change of Variables:
 	$$
-	D = d_0\left(\frac{T_C^b - T_C(D)}{T_C^b}\right)^{-\nu}
+	D = d_0\left(\frac{T_c^b - T_c(D)}{T_c^b}\right)^{-\nu}
 	$$
 	Final Result:
 	$$
-	M(T) = M_0^*\int_0^{T_C^b} t^{-d\nu +\beta} \tilde{\mu}\left(\frac{T-T_C^b}{t}\right) f_t(t) dt
+	M(T) = M_0^*\int_0^{T_c^b} t^{-d\nu +\beta} \tilde{\mu}\left(\frac{T-T_c^b}{tT_c^b}\right) f_t(t) dt
 	$$}
 	\column{4cm}
 	\begin{center}
@@ -186,18 +186,18 @@
 	\includegraphics[width=4cm]{Images/Ds}
 
 	$$
-	M(T) = M_0^*\int_0^{T_C^b} t^{-d\nu +\beta} \tilde{\mu}\left(\frac{T-T_C^b}{t}\right) f_t(t) dt
+	M(T) = M_0^*\int_0^{T_c^b} t^{-d\nu +\beta} \tilde{\mu}\left(\frac{T-T_c^b}{t}\right) f_t(t) dt
 	$$
 
 	\begin{itemize}
 		\item{$M(T)$: To be fitted}
 		\item{$d$, $\nu$, $\beta$, $\tilde{\mu}$: Known information about the material}
-		\item{$T_C^b$: May be known, otherwise taken from fit}
+		\item{$T_c^b$: May be known, otherwise taken from fit}
 		\item{$M_0^*$, $f_t$ [ $\bar{t}$, $\sigma_t$ ]: Taken from the fit}
 	\end{itemize}
 
 	$$
-	\bar{T}_C = T_C^b - \bar{t} \quad \quad \sigma_{T_C} = \sigma_t
+	\bar{T}_C = T_c^b - \bar{t} \quad \quad \sigma_{T_c} = \sigma_t
 	$$
 
 	\end{center}
@@ -209,16 +209,16 @@
 	\column{7cm}
 		\small{
 		$$
-		M(T) = M_0^*\int_0^{T_C^b} t^{-d\nu +\beta} \tilde{\mu}\left(\frac{T-T_C^b}{t}\right) f_t(t) dt
+		M(T) = M_0^*\int_0^{T_c^b} t^{-d\nu +\beta} \tilde{\mu}\left(\frac{T-T_c^b}{t}\right) f_t(t) dt
 		$$}
 		Used 2D Ising model as a benchmark:
 		\begin{itemize}
 			\item{Simulated using Monte Carlo}
-			\item{Analytical results for $\beta$, $\nu$, $T_C^b$}
+			\item{Analytical results for $\beta$, $\nu$, $T_c^b$}
 			\begin{itemize}
 				\item{$\beta = 1.25$}
 				\item{$\nu=1$}
-				\item{$T_C^b \approx 2.269$}
+				\item{$T_c^b \approx 2.269$}
 			\end{itemize}
 		\end{itemize} \vspace{4mm}
 
@@ -240,7 +240,7 @@
 	\column{7cm}
 		Introduce constraint\footnotemark[5]:
 		$$
-		\Rightarrow \sigma_{T_C}^2 = (T_C^b - \bar{T}_C)^2\left(\left(1 + \frac{\sigma_D^2}{\bar{D}^2}\right)^{1/\nu^2}-1\right)
+		\sigma_{T_c}^2 = (T_c^b - \bar{T}_C)^2\left(\left(1 + \frac{\sigma_D^2}{\bar{D}^2}\right)^{1/\nu^2}-1\right)
 		$$
 
 		In the Ising model:
@@ -248,14 +248,14 @@
 		\nu = 1
 		$$
 		$$
-		\Rightarrow \sigma_{T_C} = (T_C^b - \bar{T}_C)\frac{\sigma_D}{\bar{D}}
+		\Rightarrow \sigma_{T_c} = (T_c^b - \bar{T}_C)\frac{\sigma_D}{\bar{D}}
 		$$
 		\begin{center}\vspace{2mm}
 
 		Fitted results far better!
 		\end{center}
 	\column{5cm}
-		\includegraphics[width=4.5cm]{Images/distros}
+		% \includegraphics[width=4.5cm]{Images/distros}
 
 		\includegraphics[width=4.5cm]{Images/constr}
 	\end{columns}
@@ -266,15 +266,27 @@
 	\frametitle{Conclusions}
 	\small{
 	\begin{itemize}
-		\item{Universal method to find size dependent $T_C$ distribution based upon fitting ensemble magnetisation:}
+		\item{Universal method to find size dependent $T_c$ distribution based upon fitting ensemble magnetisation:}
 		$$
-		M(T) = M_0^*\int_0^{T_C^b} t^{-d\nu +\beta} \tilde{\mu}\left(\frac{T-T_C^b}{t}\right) f_t(t) dt
+		M(T) = M_0^*\int_0^{T_c^b} t^{-d\nu +\beta} \tilde{\mu}\left(\frac{T-T_c^b}{t}\right) f_t(t) dt
 		$$
 		\item{Successfully tested against 2D Ising model (without a loss in generality) and found a strong parameter correlation which can be solved by the constraint:}
 		$$
-		\sigma_{T_C}^2 = (T_C^b - \bar{T}_C)^2\left(\left(1 + \frac{\sigma_D^2}{\bar{D}^2}\right)^{1/\nu^2}-1\right)
+		\sigma_{T_c}^2 = (T_c^b - \bar{T}_C)^2\left(\left(1 + \frac{\sigma_D^2}{\bar{D}^2}\right)^{1/\nu^2}-1\right)
 		$$
 	\end{itemize}}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Outlook}
+	External Magnetic Field (2D Finite Size Scaling):
+
+	\includegraphics[width=3.3cm]{Images/2dFSS/3dunscaled} \hspace{1mm}
+	\includegraphics[width=3.3cm]{Images/2dFSS/magtemp} \hspace{1mm}
+	\includegraphics[width=3.3cm]{Images/2dFSS/magfield} \\ \vspace{1mm}
+	\includegraphics[width=3.3cm]{Images/2dFSS/3dscaled} \hspace{1mm}
+	\includegraphics[width=3.3cm]{Images/2dFSS/scaledmagtemp} \hspace{1mm}
+	\includegraphics[width=3.3cm]{Images/2dFSS/scaledmagfield}
 \end{frame}
 
 \begin{frame}
