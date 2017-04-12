@@ -1,2 +1,2 @@
-# Intermag2016
-Presentation for Intermag2016
+# Intermag2017
+Presentation for Intermag2017
