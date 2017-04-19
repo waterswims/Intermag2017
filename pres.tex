@@ -3,7 +3,7 @@
 % \usepackage{fontspec}
 % \setmainfont{Georgia}
 % \usepackage[T1]{fontenc}
-\usepackage{winfonts}
+% \usepackage{winfonts}
 \usepackage[backend=bibtex]{biblatex}
 \renewcommand{\sfdefault}{georgia}
 
@@ -46,7 +46,9 @@
 %%%%%%%%%%%%%%%%%%%%
 
 \title{Methodology for Indentifying the Curie Temperature Distributions of Magnetic Granular Systems}
-\author{\textbf{Authors}\\Jonathon Waters, Andreas Berger, Ganping Ju, \\Hans Fangohr, Denis Kramer and Ondrej Hovorka}
+\author{
+	Jonathon Waters$^1$, Andreas Berger$^2$, Ganping Ju$^3$, \\Hans Fangohr$^1$, Denis Kramer$^1$ and Ondrej Hovorka$^1$ \\ \vspace{2mm} \tiny{$^1$Engineering and the Environment, University of Southampton, Southampton, UK \\ $^2$CIC nanoGUNE Consolider, Donostia-San Sebastian, Spain \\ $^3$Seagate Technology, 47010 Kato Road, Fremont, California, USA}
+}
 \date{}
 
 \begin{document}
@@ -74,8 +76,8 @@
 		\end{itemize} \vspace{5mm}
 
 		\begin{center}
-		\includegraphics[width=2.9cm]{Images/coerc} \hspace{1mm}
-		\includegraphics[width=2.9cm]{Images/laser} \\
+		\includegraphics[width=2.8cm]{Images/coerc} \hspace{1mm}
+		\includegraphics[width=2.8cm]{Images/laser} \\
 		\tiny E. Dobisz et al. Proc IEEE 96.11, 1836 (2008)
 		\end{center}
 
@@ -95,34 +97,43 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Defining Finite Sized $T_c$}
+	\frametitle{$T_c$ Distributions}
+	\centering
+	\includegraphics[width=10cm]{Images/roadmap_grains} \\
+	\tiny D. Weller et. al. A HAMR Media Technology Roadmap to an Areal Density of 4 Tb/in$^2$ (2014).
+\end{frame}
+
+\begin{frame}
+	\frametitle{$T_c$ Distributions}
 	\begin{columns}
 		\column{6cm}
 		\begin{center}
-		Correlation length $\propto |T-T_c^b|^{-\nu}$ \\ \vspace{3mm}
-		Grain size, $D \propto |T_c(D)-T_c^b|^{-\nu}$ \\ \vspace{3mm}
-		\includegraphics[width=5cm]{Images/grains2}
+			$T_c$ of an individual grain changes with the size $D$ \\ \vspace{4mm}
+			\includegraphics[width=5cm]{Images/suscept}
+			% \includegraphics[width=5cm]{Images/grains2}
 		\end{center}
 		\column{6cm}
 		\begin{center}
-		\includegraphics[width=5cm]{Images/TcD}
-		\vspace{4mm}
-		Distribution in $D$ leads to distribution in $T_c$
-		$$
-		f_D(D) \Longrightarrow f_{T_c}(T_c)
-		$$
+			$D \propto |T_c(D)-T_c^b|^{-\nu}$ \\ \vspace{3mm}
+			\includegraphics[width=5cm]{Images/TcD}
+			\vspace{4mm}
+			Distribution in $D$ leads to distribution in $T_c$
+			$$
+			f_D(D) \Longrightarrow f_{T_c}(T_c)
+			$$
 		\end{center}
 	\end{columns}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Currently Used Methods}
+	\frametitle{Finding $T_c$}
+	Two approaches:
 	\vspace{4mm}
 	\begin{itemize}
 		\item{Explicit measurement of individual grains.\footnotemark[3]}
 		\begin{itemize}
 			\item{Switching temperature is measured by a laser system} \item{Switching temperature then related to $T_c$}
-			\item{Very little agreement between methods}
+			\item{Inconsistencies between methods}
 			\item{Currently only applicable to HAMR}
 		\end{itemize}
 		\vspace{4mm}
@@ -191,8 +202,7 @@
 
 	\begin{itemize}
 		\item{$M(T)$: To be fitted}
-		\item{$d$, $\nu$, $\beta$, $\tilde{\mu}$: Known information about the material}
-		\item{$T_c^b$: May be known, otherwise taken from fit}
+		\item{$d$, $\nu$, $\beta$, $\tilde{\mu}$, $T_c^b$: Known information about the material (could be taken from the fit)}
 		\item{$M_0^*$, $f_t$ [ $\bar{t}$, $\sigma_t$ ]: Taken from the fit}
 	\end{itemize}
 
