@@ -97,25 +97,26 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{$T_c$ Distributions}
+	\frametitle{$T_c$ Distributions from \\Finite Sized Grains}
 	\centering
 	\includegraphics[width=10cm]{Images/roadmap_grains} \\
 	\tiny D. Weller et. al. A HAMR Media Technology Roadmap to an Areal Density of 4 Tb/in$^2$ (2014).
 \end{frame}
 
 \begin{frame}
-	\frametitle{$T_c$ Distributions}
+	\frametitle{$T_c$ Distributions from \\Finite Sized Grains}
 	\begin{columns}
 		\column{6cm}
 		\begin{center}
 			$T_c$ of an individual grain changes with the size $D$ \\ \vspace{4mm}
-			\includegraphics[width=5cm]{Images/suscept}
+			\includegraphics[width=4cm]{Images/suscept_inf}\\
+			\includegraphics[width=4cm]{Images/suscept}
 			% \includegraphics[width=5cm]{Images/grains2}
 		\end{center}
 		\column{6cm}
 		\begin{center}
 			$D \propto |T_c(D)-T_c^b|^{-\nu}$ \\ \vspace{3mm}
-			\includegraphics[width=5cm]{Images/TcD}
+			\includegraphics[width=5cm]{Images/TcD_new}
 			\vspace{4mm}
 			Distribution in $D$ leads to distribution in $T_c$
 			$$
@@ -127,21 +128,22 @@
 
 \begin{frame}
 	\frametitle{Finding $T_c$}
-	Two approaches:
+	Two possible approaches:
 	\vspace{4mm}
 	\begin{itemize}
 		\item{Explicit measurement of individual grains.\footnotemark[3]}
 		\begin{itemize}
-			\item{Switching temperature is measured by a laser system} \item{Switching temperature then related to $T_c$}
+			\item{Switching temperature is measured by a laser system}
+			\item{Switching temperature then related to $T_c$}
 			\item{Inconsistencies between methods}
-			\item{Currently only applicable to HAMR}
+			\item{Currently only applied to HAMR}
 		\end{itemize}
 		\vspace{4mm}
 		\item{Identification from macroscale measurements\footnotemark[4]}
 		\begin{itemize}
 			\item{Single measurement with magnetometer}
 			\item{Integral measure}
-			\item{But uses bulk relations}
+			\item{Uses bulk relations not finite-size scaling}
 		\end{itemize}
 	\end{itemize}
 	\footnotetext[3]{\tiny S. Pisana et al. IEEE Transactions on Magnetics 51.4, 1 (2015)}
@@ -157,7 +159,7 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Our Method}
+	\frametitle{Fundemental Formulae}
 	\begin{columns}
 	\column{8cm}
 	\small{
@@ -202,12 +204,13 @@
 
 	\begin{itemize}
 		\item{$M(T)$: To be fitted}
-		\item{$d$, $\nu$, $\beta$, $\tilde{\mu}$, $T_c^b$: Known information about the material (could be taken from the fit)}
+		\item{$d$, $\tilde{\mu}$: Known information about the material}
+		\item{$\nu$, $\beta$, $T_c^b$: Known but could be taken from the fit}
 		\item{$M_0^*$, $f_t$ [ $\bar{t}$, $\sigma_t$ ]: Taken from the fit}
 	\end{itemize}
 
 	$$
-	\bar{T}_C = T_c^b - \bar{t} \quad \quad \sigma_{T_c} = \sigma_t
+	\bar{T}_C = T_c^b(1 - \bar{t}) \quad \quad \sigma_{T_c} = T_c^b\sigma_t
 	$$
 
 	\end{center}
@@ -280,10 +283,13 @@
 		$$
 		M(T) = M_0^*\int_0^1 t^{-d\nu +\beta} \tilde{\mu}\left(\frac{T-T_c^b}{tT_c^b}\right) f_t(t) dt
 		$$
-		\item{Successfully tested against 2D Ising model (without a loss in generality) and found a strong parameter correlation which can be solved by the constraint:}
-		$$
-		\sigma_{T_c}^2 = (T_c^b - \bar{T}_C)^2\left(\left(1 + \frac{\sigma_D^2}{\bar{D}^2}\right)^{1/\nu^2}-1\right)
-		$$
+		% \item{Successfully tested against 2D Ising model (without a loss in generality) and found a strong parameter correlation which can be solved by the constraint:}
+		% $$
+		% \sigma_{T_c}^2 = (T_c^b - \bar{T}_C)^2\left(\left(1 + \frac{\sigma_D^2}{\bar{D}^2}\right)^{1/\nu^2}-1\right)
+		% $$
+		\item{All that is needed for this fit is the form of the universal magentisation function $\tilde{\mu}$ and the dimension of the grains $d$}
+		\item{Values of critical exponents can help reduce the parameters of this fit: $\nu$, $\beta$, $T_c^b$}
+		\item{Successfully tested against the 2D Ising Model (without any loss of generality)}
 	\end{itemize}}
 \end{frame}
 
